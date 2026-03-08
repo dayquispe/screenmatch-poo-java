@@ -1,0 +1,37 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Serie;
+
+public class Principal {
+    public static void main(String[] args) {
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("O podero chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
+
+        Filme meuFilme2 = new Filme();
+        meuFilme2.setNome("Garfield");
+        meuFilme2.setAnoDeLancamento(1970);
+        meuFilme2.setDuracaoEmMinutos(150);
+
+        meuFilme.exibirFichaTecnica();
+
+        Serie minhaSerie = new Serie();
+        minhaSerie.setNome("Lucifer");
+        minhaSerie.setAnoDeLancamento(2003);
+        minhaSerie.setDuracaoEmMinutos(4);
+        minhaSerie.setTemporadas(2);
+        minhaSerie.setMinutosPorEpisodio(20);
+        minhaSerie.setEpisodiosPorTemporada(2);
+        minhaSerie.exibirFichaTecnica();
+
+       minhaSerie.exibirFichaTecnica();
+        System.out.println("Para maratonar a série, serão: " + minhaSerie.getDuracaoEmMinutos() + " minutos");
+
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(minhaSerie);
+        System.out.println(calculadora.getTempoTotal());
+    }
+}
