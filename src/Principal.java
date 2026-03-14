@@ -1,5 +1,6 @@
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
+import br.com.alura.screenmatch.desafios.desafio2.CalculadoraSalaRetangular;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
@@ -45,5 +46,11 @@ public class Principal {
         episodio.setTotalVisualizacoes(380);
         filtro.filtra(episodio);
 
+        System.out.println("========================");
+        System.out.println("Usando a Classe CalculadoraSalaRetangular");
+        CalculadoraSalaRetangular calculaSala = new CalculadoraSalaRetangular();
+
+        calculaSala.calcularArea(4, 5);
+        calculaSala.calcularPerimetro(4, 5);
     }
 }
