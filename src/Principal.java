@@ -10,11 +10,13 @@ import br.com.alura.screenmatch.desafios.desafio5.Livro;
 import br.com.alura.screenmatch.desafios.desafio5.ProdutoFisico;
 import br.com.alura.screenmatch.desafios.desafio6.Produto;
 import br.com.alura.screenmatch.desafios.desafio6.Servico;
+import br.com.alura.screenmatch.desafiosListasEColecoes.Pessoa;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
 import java.awt.event.WindowListener;
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
@@ -127,6 +129,52 @@ public class Principal {
         MinhasPreferidas preferidas = new MinhasPreferidas();
         preferidas.inclui(meuPodcast);
         preferidas.inclui(minhaMusica);
+
+
+        Filme filmeDoPaulo = new Filme();
+        filmeDoPaulo.setNome("Dogville");
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.setAnoDeLancamento(2003);
+        filmeDoPaulo.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoPaulo);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(meuFilme2);
+        System.out.println("Tamanho da lista de filmes: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.getFirst().getNome());
+        System.out.println(listaDeFilmes);
+
+        System.out.println("toString do filme: " + listaDeFilmes.getFirst().toString());
+
+
+        System.out.println("========================");
+        System.out.println("Usando a classe Pessoa :");
+        Pessoa pessoa1 = new Pessoa();
+        pessoa1.setNome("Érica");
+        pessoa1.setIdade(45);
+
+        Pessoa pessoa2 = new Pessoa();
+        pessoa2.setNome("João");
+        pessoa2.setIdade(54);
+
+        Pessoa pessoa3 = new Pessoa();
+        pessoa3.setNome("Carla");
+        pessoa3.setIdade(65);
+
+        System.out.println("============Trabalhando com listas============");
+        ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
+        listaDePessoas.add(pessoa1);
+        listaDePessoas.add(pessoa2);
+        listaDePessoas.add(pessoa3);
+
+        System.out.println("Tamao da lista de pessoa é: " + listaDePessoas.size());
+        System.out.println("Primeira pessoa da lista de pessoas: " + listaDePessoas.getFirst());
+        System.out.println("Lista completa: " + listaDePessoas);
+
+
+
+
 
 
     }
