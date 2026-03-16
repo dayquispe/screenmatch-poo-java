@@ -8,6 +8,11 @@ public class Titulo {
     private int totalDeAvaliacoes = 0;
     private int duracaoEmMinutos = 0;
 
+    public Titulo(String nome, int anoDeLancamento) {
+        this.nome = nome;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public boolean isIncluidoNoPlano() {
         return incluidoNoPlano;
     }
